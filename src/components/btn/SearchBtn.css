@@ -1,0 +1,22 @@
+.search-input {
+	background-color: transparent;
+	padding: 8px 11px;
+	width: 45px;
+	border-radius: 25px;
+	background-image: url(../../assets/serach.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 1px solid transparent;
+}
+
+.show-btn {
+	width: 40px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: transparent;
+	height: 40px;
+}
+.search-wrapper {
+	display: flex;
+	align-items: center;
+}
