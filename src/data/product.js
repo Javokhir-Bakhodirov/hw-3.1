@@ -39,14 +39,14 @@ export const products = [
 		id: 6,
 		name: "McSpicy Special",
 		cooking: 30,
-		rating: 5.0,
+		rating: 3.0,
 		image: img,
 	},
 	{
 		id: 7,
 		name: "McSpicy Special",
 		cooking: 30,
-		rating: 5.0,
+		rating: 3.2,
 		image: img,
 	},
 	{

@@ -2,6 +2,7 @@ import React from "react";
 import arrows from "../../assets/arrows.svg";
 import "./AboutUs.css";
 import CustomersCard from "../prductCard/customersCard/CustomersCard";
+import { customers } from "../../data/customers.js";
 
 const AboutUs = () => {
 	return (
@@ -16,7 +17,11 @@ const AboutUs = () => {
 						</div>
 					</div>
 					<div className="about__bottom">
-						<CustomersCard />
+						<ul className="customers__list">
+							{customers.map((customer) => (
+								<CustomersCard props={customer} key={customer.id} />
+							))}
+						</ul>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 import Card from "../prductCard/Card";
+import { products } from "../../data/product.js";
 import "./Menu.css";
 
 const Menu = () => {
@@ -14,7 +15,11 @@ const Menu = () => {
 							aliquam condimentum.
 						</p>
 					</div>
-					<Card />
+					<ul className="products">
+						{products.map((product) => (
+							<Card key={product.id} product={product} />
+						))}
+					</ul>
 				</div>
 			</div>
 		</section>

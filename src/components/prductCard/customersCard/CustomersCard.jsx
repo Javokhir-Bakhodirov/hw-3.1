@@ -1,25 +1,20 @@
 import "./CustomersCard.css";
-import { customers } from "../../../data/customers.js";
 import stars from "../../../assets/stars.svg";
 
-const CustomersCard = () => {
+const CustomersCard = ({ props }) => {
+	console.log(props);
 	return (
-		<ul className="customers__list">
-			{customers.map((customer) => (
-				<li className="customer" key={customer.id}>
-					<img src={stars} alt="" />
-					<p className="customer__text">"{customer.description}"</p>
-					<div className="custumer__info">
-						<img src={customer.avatar} alt="avatar" width={52} height={52} />
-						<div className="customer__n">
-							<h3 className="customer__name">{customer.name}</h3>
-							<p className="customer__job">{customer.job}</p>
-						</div>
-					</div>
-				</li>
-			))}
-		</ul>
+		<li className="customer" key={props.id}>
+			<img src={stars} alt="" />
+			<p className="customer__text">"{props.description}"</p>
+			<div className="custumer__info">
+				<img src={props.avatar} alt="avatar" width={52} height={52} />
+				<div className="customer__n">
+					<h3 className="customer__name">{props.name}</h3>
+					<p className="customer__job">{props.job}</p>
+				</div>
+			</div>
+		</li>
 	);
 };
-
 export default CustomersCard;
